@@ -179,9 +179,17 @@ lista.remove("Radek")
 print(lista)
 # ['Radek', 'Tomek', 'Dawid', 'Artur', 'Zenek']
 
-lista_k = lista
+lista_copy = lista.copy()  # kopia elemtow listy, kopia danych
+lista_k = lista  # kopia referencji (adresu)
 print(lista_k)  # ['Radek', 'Tomek', 'Dawid', 'Artur', 'Zenek']
 print(lista)  # ['Radek', 'Tomek', 'Dawid', 'Artur', 'Zenek']
 
 lista.clear()  # usunięcie wszystkie elementy z listy
 print(lista)  # []
+print(lista_k)  # []
+print(lista_copy)  # ['Radek', 'Tomek', 'Dawid', 'Artur', 'Zenek']
+
+# sprawdzenie adresu
+print(id(lista_copy))  # 2180494839744
+print(id(lista))  # 2180498864960
+print(id(lista_k))  # 2180498864960
