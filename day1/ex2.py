@@ -70,5 +70,8 @@ for ele1, ele2, ele3, ele4, ele5, ele6 in my_list:
 # 9                 New Super Mario Bros. Wii   Wii    2009      Platform       Nintendo
 # 10                                Duck Hunt   NES    1984      Shooter        Nintendo
 
+# dodanie nowej kolumny
+ws['K1'] = "Sum of Sales"
+
 wb.save('video2.xlsx')
 wb.close()
