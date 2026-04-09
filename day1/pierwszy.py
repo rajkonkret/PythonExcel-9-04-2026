@@ -239,3 +239,18 @@ print(slownik['name'])  # Radek
 # print(slownik['imie']) # KeyError: 'imie' - brak klucza
 print(slownik.get('age'))  # 56
 print(slownik.get('wiek'))  # None
+
+pusty_slownik = {}
+print(type(pusty_slownik))  # <class 'dict'>
+print(pusty_slownik)  # {}
+
+p_s = dict()
+print(type(p_s))  # <class 'dict'>
+
+# input()
+tekst = input("Podaj imię:")
+print(tekst)
+# Podaj imię:Radek
+# Radek
+
+# robimy kalkulator
