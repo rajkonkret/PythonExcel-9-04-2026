@@ -54,3 +54,27 @@ print(0.1 + 0.2)  # 0.30000000000000004
 # the sum 12.345 + 1.0001 = 13.3451 might be rounded to 13.345
 
 # decimal - pozwala ominąc problem zaokrąglenia
+
+# zmienna - pudełko na dane
+# snake_case
+
+# typowanie dynamiczne
+name = "Radek"
+print(name)  # Radek
+print(type(name))  # <class 'str'>
+
+name = 90
+print(name)
+print(type(name))  # <class 'int'>
+
+# rzutowanie
+a = "1"
+b = 0
+# print(a + b) # TypeError: can only concatenate str (not "int") to str
+print(int(a) + int(b))  # int() - rzutowanie na int, 1
+
+print(str(1) + str(1))  # 11
+# mypy
+# type hinting
+a: int = "1"
+print(a)  # 1
