@@ -34,3 +34,8 @@ print(sheet['A1'])  # <Cell 'Sheet'.A1>
 print(sheet['A1'].value)  # 42
 
 print(sheet['A2'].value)  # 42
+
+# pętla
+# for - pętla iteracyjna
+for i in range(5):  # od 0 do 4
+    print(i)
