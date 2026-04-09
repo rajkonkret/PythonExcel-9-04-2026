@@ -17,3 +17,6 @@ if __name__ == '__main__':
 # (.venv) PS C:\Users\Szkolenie\PycharmProjects\PythonExcel-9-04-2026> python main.py
 # Hi, PyCharm
 # 2 x shift - wyszukiwanie
+# https://peps.python.org/pep-0008/
+# snake_case
+# ctrl alt l - formatowanie kodu
