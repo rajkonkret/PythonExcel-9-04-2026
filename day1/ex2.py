@@ -13,3 +13,7 @@ print("Total number of columns:", ws.max_column)  # Total number of columns: 10
 
 print("Value in cell A1 is:", ws['A1'].value)  # Value in cell A1 is: Rank
 
+# list comprehensions
+values = [ws.cell(row=1, column=i).value for i in range(1, ws.max_column + 1)]
+print(values)
+# ['Rank', 'Name', 'Platform', 'Year', 'Genre', 'Publisher', 'NA_Sales', 'EU_Sales', 'JP_Sales', 'Other_Sales']
