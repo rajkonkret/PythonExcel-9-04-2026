@@ -14,6 +14,11 @@ wb = Workbook()  # tworzy szablon pliku excel
 ws = wb.active  # ustawiamy arkusz w pliku
 
 ws['A1'] = 42
+ws['A2'] = 42
+ws['A3'] = 42
+
+ws.append([1, 2, 3])
+ws.append([4, 5, 6])
 
 # zapisanie arkusza do pliku excel
 wb.save("sample.xlsx")
