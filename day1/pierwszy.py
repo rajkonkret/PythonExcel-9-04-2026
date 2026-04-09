@@ -161,6 +161,27 @@ print(liczba)  # 100000000000
 # lista - przechowuje elementy z zachowaniem kolejności
 
 lista = [1, 2, 3, 4, 5, 6, "Radek"]
-print(lista) # [1, 2, 3, 4, 5, 6, 'Radek']
-print(type(lista)) # <class 'list'>
+print(lista)  # [1, 2, 3, 4, 5, 6, 'Radek']
+print(type(lista))  # <class 'list'>
 
+lista = []  # pusta lista
+lista.append("Radek")
+lista.append("Radek")
+lista.append("Tomek")
+lista.append("Dawid")
+lista.append("Artur")
+lista.append("Zenek")
+print(lista)
+# ['Radek', 'Radek', 'Tomek', 'Dawid', 'Artur', 'Zenek']
+
+# usunięcie pierwszego napotkanego
+lista.remove("Radek")
+print(lista)
+# ['Radek', 'Tomek', 'Dawid', 'Artur', 'Zenek']
+
+lista_k = lista
+print(lista_k)  # ['Radek', 'Tomek', 'Dawid', 'Artur', 'Zenek']
+print(lista)  # ['Radek', 'Tomek', 'Dawid', 'Artur', 'Zenek']
+
+lista.clear()  # usunięcie wszystkie elementy z listy
+print(lista)  # []
