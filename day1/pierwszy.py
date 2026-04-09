@@ -209,3 +209,17 @@ print(type(tupla2))  # <class 'tuple'>
 
 # tupla1[1] = "190" # TypeError: 'tuple' object does not support item assignment
 
+# zbior - set
+# przechowuje unikalne wartosci
+# nie zachowuje kolejnosci
+# nie ma indeksu
+lista = [2, 5, 6, 8, 6, 7, 2, 8, 5, 9]
+zbior = set(lista)
+print(zbior)  # {2, 5, 6, 7, 8, 9}
+
+pusty_zbior = set()  # tworzenie pustego zbioru
+print(pusty_zbior)  # set()
+pusty_zbior.add(15)
+print(pusty_zbior)  # {15}
+
+
