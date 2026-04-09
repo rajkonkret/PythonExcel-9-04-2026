@@ -272,3 +272,4 @@ print(pusty_slownik)  # {'name': 'Radek', 'age': 67}
 
 p_s.update([('name', "Radek"), ('age', 67)])
 print(p_s)  # {'name': 'Radek', 'age': 67}
+# https://www.hackerrank.com/dashboard
