@@ -39,3 +39,24 @@ print(sheet['A2'].value)  # 42
 # for - pętla iteracyjna
 for i in range(5):  # od 0 do 4
     print(i)
+
+for row in sheet.iter_rows(min_row=1, max_row=5):
+    for cell in row:
+        print(cell.value)
+# 42
+# None
+# None
+# 42
+# None
+# None
+# 42
+# None
+# None
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+
+# None - nie wiem, stan nieokreslony -> odpowiednik null
