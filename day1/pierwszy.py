@@ -78,3 +78,62 @@ print(str(1) + str(1))  # 11
 # type hinting
 a: int = "1"
 print(a)  # 1
+
+print(25 * "-")
+
+# teksty są niemutowalne
+tekst = "Witaj Świecie"
+print(tekst)  # Witaj Świecie
+
+tekst.upper()  # zwraca kopie
+# Return a copy of the string converted to uppercase.
+print(tekst)  # Witaj Świecie
+
+nowy_tekst = tekst.upper()
+print(nowy_tekst)  # WITAJ ŚWIECIE
+
+print(tekst.upper())  # WITAJ ŚWIECIE
+
+zmienna1 = "GROSS"
+zmienna2 = "groẞ"
+
+print(zmienna1.lower() == zmienna2.lower())  # False, == - porównanie
+# ctrl d - kopiowanie linii
+print(zmienna1.casefold() == zmienna2.casefold())  # True, == - porównanie
+
+# typ logiczny-> True, False
+print(1 != 0)  # czy różne, True
+
+name = "Radek"
+
+# Nazywam się Radek!
+# f-string - sformatowany string
+print(f"Nazywam się {name}!")  # Nazywam się Radek!
+
+a = 4.5678
+print(f"Liczba: {a}")  # Liczba: 4.5678
+print(f"Liczba: {a:.2f}")  # Liczba: 4.57 zaokraglenie
+print("Liczba:", a)  # Liczba: 4.5678
+print("Liczba:", a, sep="::::")  # Liczba:::::4.5678
+# sep
+# string inserted between values, default a space.
+# end
+# string appended after the last value, default a newline.
+
+# %f - float
+print("Liczba %f" % a)  # Liczba 4.567800
+print("Liczba %.2f" % a)  # Liczba 4.57
+
+# print("Liczba %f" % "Radek")  # TypeError: must be real number, not str
+
+print("""
+Tekst
+    wielolinijkowy""")
+# "Tekst
+#     wielolinijkowy"
+
+"""
+Komentarz
+    wielolinijkowy - dokumentacja - docstring"""
+
+print(print.__doc__)
