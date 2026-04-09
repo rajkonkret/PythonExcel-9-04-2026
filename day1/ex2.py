@@ -1,4 +1,5 @@
 import openpyxl
+from pprint import pprint
 
 wb = openpyxl.load_workbook('videogamesales.xlsx')
 ws = wb.active
@@ -42,3 +43,15 @@ for value in ws.iter_rows(
     my_list.append(value)
 
 print(my_list)
+pprint(my_list)
+# [('Rank', 'Name', 'Platform', 'Year', 'Genre', 'Publisher'),
+#  (1, 'Wii Sports', 'Wii', 2006, 'Sports', 'Nintendo'),
+#  (2, 'Super Mario Bros.', 'NES', 1985, 'Platform', 'Nintendo'),
+#  (3, 'Mario Kart Wii', 'Wii', 2008, 'Racing', 'Nintendo'),
+#  (4, 'Wii Sports Resort', 'Wii', 2009, 'Sports', 'Nintendo'),
+#  (5, 'Pokemon Red/Pokemon Blue', 'GB', 1996, 'Role-Playing', 'Nintendo'),
+#  (6, 'Tetris', 'GB', 1989, 'Puzzle', 'Nintendo'),
+#  (7, 'New Super Mario Bros.', 'DS', 2006, 'Platform', 'Nintendo'),
+#  (8, 'Wii Play', 'Wii', 2006, 'Misc', 'Nintendo'),
+#  (9, 'New Super Mario Bros. Wii', 'Wii', 2009, 'Platform', 'Nintendo'),
+#  (10, 'Duck Hunt', 'NES', 1984, 'Shooter', 'Nintendo')]
