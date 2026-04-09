@@ -193,3 +193,19 @@ print(lista_copy)  # ['Radek', 'Tomek', 'Dawid', 'Artur', 'Zenek']
 print(id(lista_copy))  # 2180494839744
 print(id(lista))  # 2180498864960
 print(id(lista_k))  # 2180498864960
+
+# krotka (tupla) - kolekcja niemutowalna, do odczytu
+# pozwala lepiej zarzadzac pamięciu
+
+krotka = tuple(lista_copy)
+print(krotka)  # ('Radek', 'Tomek', 'Dawid', 'Artur', 'Zenek')
+print(type(krotka))  # <class 'tuple'>
+
+tupla1 = "Radek", "Tomek"
+print(type(tupla1))  # <class 'tuple'>
+
+tupla2 = "Radek",
+print(type(tupla2))  # <class 'tuple'>
+
+# tupla1[1] = "190" # TypeError: 'tuple' object does not support item assignment
+
