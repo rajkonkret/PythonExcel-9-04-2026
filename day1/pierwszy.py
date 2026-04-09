@@ -29,3 +29,28 @@ print(sys.int_info)
 
 print("34" + "90")  # 3490
 print(34 + 19)  # 53
+
+# print("34" + 19)  # TypeError: can only concatenate str (not "int") to str
+
+print(34 * "168")
+# 168168168168168168168168168168168168168168168168168168168168168168168168168168168168168168168168168168
+
+print(34 * 168)  # 5712
+
+print(25 * "-")
+
+# liczby zmiennoprzecinkowe
+print(4.56)
+print(type(4.56))  # <class 'float'>
+
+print(sys.float_info)
+# sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308, min_exp=-1021,
+# min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)
+
+# błąd zokrąglenia
+print(0.1 + 0.9)  # 1.0
+print(0.1 + 0.2)  # 0.30000000000000004
+# For example, in a floating-point arithmetic with five base-ten digits,
+# the sum 12.345 + 1.0001 = 13.3451 might be rounded to 13.345
+
+# decimal - pozwala ominąc problem zaokrąglenia
