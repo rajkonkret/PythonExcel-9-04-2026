@@ -137,3 +137,17 @@ Komentarz
     wielolinijkowy - dokumentacja - docstring"""
 
 print(print.__doc__)
+
+print(100 / 3)  # 33.333333333333336 -> float
+print(100 // 3)  # 33 - część całkowita
+print(100 % 3)  # modulo - reszta z dzielenia, 1
+# 33 * 3 = 99, 100 - 99 = 1 reszta, modulo
+print(10 % 3)  # reszta 1
+
+zysk = 908765432190
+print(f"Nasza duża liczba {zysk:,}")  # Nasza duża liczba 908,765,432,190
+print(f"Nasza duża liczba {zysk:_}")  # Nasza duża liczba 908_765_432_190
+print(f"Nasza duża liczba {zysk:_}".replace("_", " "))
+# Nasza duża liczba 908 765 432 190
+print(f"Nasza duża liczba {zysk:_}".replace("_", "."))
+# Nasza duża liczba 908.765.432.190
