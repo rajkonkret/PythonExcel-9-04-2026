@@ -30,3 +30,15 @@ print(data)
 #  'Wii Play',
 #  'New Super Mario Bros. Wii',
 #  'Duck Hunt']
+
+my_list = list()  # pusta lista
+for value in ws.iter_rows(
+        min_row=1,
+        max_row=11,
+        min_col=1,
+        max_col=6,
+        values_only=True
+):
+    my_list.append(value)
+
+print(my_list)
