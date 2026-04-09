@@ -262,3 +262,13 @@ print(type(p_s))  # <class 'dict'>
 # # 11.0
 
 print(eval("5 + 6"))  # 11
+
+print(pusty_slownik)  # {}
+pusty_slownik['name'] = "Radek"
+print(pusty_slownik)  # {'name': 'Radek'}
+
+pusty_slownik.update({"age": 67})
+print(pusty_slownik)  # {'name': 'Radek', 'age': 67}
+
+p_s.update([('name', "Radek"), ('age', 67)])
+print(p_s)  # {'name': 'Radek', 'age': 67}
