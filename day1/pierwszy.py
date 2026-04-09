@@ -151,3 +151,7 @@ print(f"Nasza duża liczba {zysk:_}".replace("_", " "))
 # Nasza duża liczba 908 765 432 190
 print(f"Nasza duża liczba {zysk:_}".replace("_", "."))
 # Nasza duża liczba 908.765.432.190
+
+liczba = 100_000_000_000
+print(type(liczba))  # <class 'int'>
+print(liczba)  # 100000000000
