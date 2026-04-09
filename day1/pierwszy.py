@@ -248,9 +248,17 @@ p_s = dict()
 print(type(p_s))  # <class 'dict'>
 
 # input()
-tekst = input("Podaj imię:")
-print(tekst)
+# tekst = input("Podaj imię:")
+# print(tekst)
 # Podaj imię:Radek
 # Radek
 
 # robimy kalkulator
+# a = input("Podaj pierwszą wartość:")  # -> str
+# b = input("Podaj drugaa wartość:")
+# print(int(a) + float(b))
+# # Podaj pierwszą wartość:5
+# # Podaj drugaa wartość:6
+# # 11.0
+
+print(eval("5 + 6"))  # 11
