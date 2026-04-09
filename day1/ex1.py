@@ -23,3 +23,14 @@ ws.append([4, 5, 6])
 # zapisanie arkusza do pliku excel
 wb.save("sample.xlsx")
 wb.close()
+
+# wczytanie pliku excel
+workbook = load_workbook('sample.xlsx')
+sheet = workbook.active  # aktywny arkusz
+print(sheet)  # <Worksheet "Sheet">
+
+# wypisanie zawartości z komórki A1
+print(sheet['A1'])  # <Cell 'Sheet'.A1>
+print(sheet['A1'].value)  # 42
+
+print(sheet['A2'].value)  # 42
