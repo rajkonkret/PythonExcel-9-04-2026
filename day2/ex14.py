@@ -7,3 +7,31 @@ df = pd.DataFrame(
         "Miasto": ['Warszawa', "Wrocław", "Legnica"]
     }
 )
+
+# kontekst manager
+with pd.ExcelWriter("Tabela.xlsx", engine="xlsxwriter") as writer:
+    df.to_excel(writer, sheet_name="Osoby", startrow=1, header=False, index=False)
+
+    workbook = writer.book
+    worksheet = writer.sheets['Osoby']
+
+    header_format = workbook.add_format({
+        'bold': True,
+        'text_wrap': True,
+        'valign': 'vcenter',
+        "bg_color": '#D7E4BC',
+        'border': 1
+    })
+
+    # enumerate() - numerowanie kolekcji
+    for col_num, value in enumerate(df.columns.values):
+        worksheet.write(0, col_num, value, header_format)
+
+    (max_row, max_col) = df.shape  # odczyt kształtu tabeli
+    cell_range = f'A1:{chr(65 + max_col)}{max_row + 1}'
+
+    # wstawienie tabeli
+    worksheet.add_table(cell_range, {
+        'name': "TabelaOsoby",
+        "columns": [{"header": col} for col in df.columns]
+    })
