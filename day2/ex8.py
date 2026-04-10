@@ -47,10 +47,22 @@ wb.close()
 # wb.close()
 
 # usunięcie arkusza z pliku
-wb.remove(wb['Empty Sheet'])
+# wb.remove(wb['Empty Sheet'])
+# print(wb.sheetnames)
+# # ['Video Games Sales Data', 'Total Sales by Genre', 'Breakdown of Sales by Genre', 'Breakdown of Sales by Year']
+# wb.save(filename)
+# wb.close()
+
+# arkusz nie istnieje
+wb = openpyxl.load_workbook(filename)
+# ws = wb['Empty Sheet']
+# KeyError: 'Worksheet Empty Sheet does not exist.'
+
+# kopiowanie arkusza
+wb.copy_worksheet(wb['Video Games Sales Data'])
+
 print(wb.sheetnames)
-# ['Video Games Sales Data', 'Total Sales by Genre', 'Breakdown of Sales by Genre', 'Breakdown of Sales by Year']
 wb.save(filename)
 wb.close()
-
-
+# ['Video Games Sales Data', 'Total Sales by Genre', 'Breakdown of Sales by Genre', 'Breakdown of Sales by Year',
+# 'Video Games Sales Data Copy', 'Video Games Sales Data Copy1']
