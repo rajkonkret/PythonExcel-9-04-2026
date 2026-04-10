@@ -26,4 +26,9 @@ wb.close()
 
 print(ws['S2'].value)  # =COUNTIF(E2:E16328, "Sports")
 
+ws['T1'] = "Total sum of Sports sales"
+ws['T2'] = '=SUMIF(E2:E16328, "Sports", K2:K16328)'
+# =SUMA.JEŻELI(E2:E16328; "Sports"; K2:K16328)
 
+wb.save(filename)
+wb.close()
