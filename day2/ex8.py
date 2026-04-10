@@ -37,3 +37,20 @@ for cell in ws[1:1]:
 
 wb.save(filename)
 wb.close()
+
+# dodawanie arkusza do pliku
+# wb.create_sheet('Empty Sheet')
+# print(wb.sheetnames)
+# # ['Video Games Sales Data', 'Total Sales by Genre', 'Breakdown of Sales by Genre', 'Breakdown of Sales by Year', 'Empty Sheet']
+#
+# wb.save(filename)
+# wb.close()
+
+# usunięcie arkusza z pliku
+wb.remove(wb['Empty Sheet'])
+print(wb.sheetnames)
+# ['Video Games Sales Data', 'Total Sales by Genre', 'Breakdown of Sales by Genre', 'Breakdown of Sales by Year']
+wb.save(filename)
+wb.close()
+
+
