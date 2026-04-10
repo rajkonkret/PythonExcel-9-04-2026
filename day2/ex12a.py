@@ -8,3 +8,6 @@ data = [
 ]
 
 column_name = ['Name', 'Height']
+
+df = pd.DataFrame(data, columns=column_name)
+
