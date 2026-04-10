@@ -35,8 +35,8 @@ print(ws.title)  # Video Games Sales Data
 ws['A1'].font = Font(color='FF0000', bold=True, size=12)
 ws['A2'].font = Font(color='0000FF')
 
-ws['A1'].fill  = PatternFill('lightVertical', start_color='38e3ff')
-ws['A3'].fill  = PatternFill('darkTrellis', start_color='1188A7')
+ws['A1'].fill = PatternFill('lightVertical', start_color='38e3ff')
+ws['A3'].fill = PatternFill('darkTrellis', start_color='1188A7')
 
 # ramka
 # "dashDot", "dashDotDot", "dashed", "dotted", "double", "hair", "medium", "mediumDashDot", "mediumDashDotDot",
@@ -47,6 +47,25 @@ my_border = Side(border_style='thick', color="000000")
 
 ws['A1'].border = Border(
     top=my_border, left=my_border, right=my_border, bottom=my_border
+)
+
+# formatowanie warunkowe
+fill = PatternFill(
+    start_color='90EE90',
+    end_color='90EE90',
+    fill_type='solid'
+)
+
+# {">": "greaterThan", ">=": "greaterThanOrEqual", "<": "lessThan", "<=": "lessThanOrEqual",
+#               "=": "equal", "==": "equal", "!=": "notEqual"}
+ws.conditional_formatting.add(
+    'G2:K16328',
+    CellIsRule(
+        operator="greaterThan",
+        formula=[5],
+        fill=fill,
+        font=Font(color="FF00FF")
+    )
 )
 
 wb.save(filename)
