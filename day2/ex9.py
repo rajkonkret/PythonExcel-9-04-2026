@@ -1,7 +1,7 @@
 import openpyxl
 
 from openpyxl.styles import Font, colors, PatternFill, Border, Side
-from openpyxl.formatting.rule import  CellIsRule
+from openpyxl.formatting.rule import CellIsRule
 from openpyxl.styles.fills import FILL_PATTERN_DARKUP
 
 # FILL_NONE = 'none'
@@ -23,3 +23,20 @@ from openpyxl.styles.fills import FILL_PATTERN_DARKUP
 # FILL_PATTERN_LIGHTUP = 'lightUp'
 # FILL_PATTERN_LIGHTVERTICAL = 'lightVertical'
 # FILL_PATTERN_MEDIUMGRAY = 'mediumGray'
+
+filename = 'video2.xlsx'
+wb = openpyxl.load_workbook(filename)
+ws = wb['Video Games Sales Data']
+
+print(ws.title)  # Video Games Sales Data
+
+# RGB -> Red, Green, Blue
+# https://htmlcolorcodes.com/
+ws['A1'].font = Font(color='FF0000', bold=True, size=12)
+ws['A2'].font = Font(color='0000FF')
+
+ws['A1'].fill  = PatternFill('lightVertical', start_color='38e3ff')
+ws['A3'].fill  = PatternFill('darkTrellis', start_color='1188A7')
+
+wb.save(filename)
+wb.close()
