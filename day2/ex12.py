@@ -22,3 +22,10 @@ data.info()
 #  5   kontynent  4 non-null      str
 # dtypes: float64(1), int64(2), str(3)
 # memory usage: 324.0 bytes
+
+data = [
+    ['Mark', 55, "Włochy", 4.5, "Europa"],
+    ['John', 45, "USA", "Ameryka"],
+    ['Tin', 75, "USA", "Ameryka"],
+    ['Jenny', 33, "Niemcy", "Europa"],
+]
