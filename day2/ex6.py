@@ -10,3 +10,11 @@ ws['P2'] = '=AVERAGE(K2:K16328)'
 
 wb.save(filename)
 wb.close()
+
+ws['Q1'] = "Number of populated cells"
+ws['Q2'] = '=COUNTA(E2:E16328)'
+
+wb.save(filename)
+wb.close()
+
+
