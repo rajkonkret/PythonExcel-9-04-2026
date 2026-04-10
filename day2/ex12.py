@@ -25,7 +25,12 @@ data.info()
 
 data = [
     ['Mark', 55, "Włochy", 4.5, "Europa"],
-    ['John', 45, "USA", "Ameryka"],
-    ['Tin', 75, "USA", "Ameryka"],
-    ['Jenny', 33, "Niemcy", "Europa"],
+    ['John', 45, "USA", 4.5, "Ameryka"],
+    ['Tin', 75, "USA", 4.5, "Ameryka"],
+    ['Jenny', 33, "Niemcy", 4.5, "Europa"],
 ]
+
+df = pd.DataFrame(data=data,
+                  columns=['imie', 'wiek', 'kraj', 'ocena', 'kontynent'],
+                  index=[1001, 1000, 1002, 1003])
+print(df)
