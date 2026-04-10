@@ -29,6 +29,10 @@ chart = BarChart()
 chart.add_data(values, titles_from_data=True)
 chart.set_categories(cats)
 
+chart.title = "Total Sales"
+chart.x_axis.title = "Genre"
+chart.y_axis.title = "Total Sales by Genre"
+
 ws.add_chart(chart, 'D2')
 
 wb.save(filename)
